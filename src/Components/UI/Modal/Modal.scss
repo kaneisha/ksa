@@ -1,0 +1,120 @@
+@import "../../../assets/scss/variables";
+
+.Modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 250;
+
+    .btn-med {
+        font-size: 0.9em;
+    }
+
+    .btn-small {
+        font-size: 0.8em;
+    }
+
+    .transparent-input {
+        background-color: transparent;
+        text-align: center;
+        font-size: 1em;
+        color: $primary;
+        border: none;
+        width: 75%;
+        min-width: 350px;
+
+        &:active,
+        &:focus {
+            box-shadow: none;
+            border: none;
+        }
+    }
+
+    .WallPost {
+        max-width: 600px !important;
+        font-size: 2vw;
+
+        @media (min-width: 660px) {
+            font-size: 13px;
+        }
+    }
+
+    .icon-cross {
+        padding: 0.2em;
+    }
+
+    .post-wrapper {
+        padding: 0;
+    }
+
+    .post__brand {
+        font-size: 1em;
+    }
+
+    .footer {
+        margin-top: 1em;
+        font-size: 1.1em;
+        text-align: center;
+
+        p {
+            margin-bottom: 0;
+            color: #fff;
+        }
+    }
+
+    > .inner {
+        margin-top: $topnav-height - 1em;
+        z-index: 120;
+        position: absolute;
+        left: 1em;
+        right: 1em;
+        margin-bottom: 100px;
+
+        @include media-breakpoint-up(md) {
+            left: inherit;
+            right: inherit;
+            position: relative;
+            width: 90%;
+            max-width: 700px;
+            margin-top: $topnav-height + 1em;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 0.4em;
+
+            .title {
+                font-size: 1.2em;
+                font-weight: bold;
+                // font-style: italic;
+                margin: 0;
+                color: $primary;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .nav-tabs {
+        .active {
+            background: transparent;
+            border-bottom: 1px solid theme-color("light");
+        }
+        .nav-link:not(.active) {
+            background-color: rgba($ui-active--dark, 0.1);
+        }
+
+        .nav-link {
+            margin-right: 0.2em;
+        }
+        .nav-link:hover:not(.active) {
+            background-color: rgba($ui-active--dark, 0.2);
+        }
+    }
+}

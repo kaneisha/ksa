@@ -1,0 +1,171 @@
+@import "../../../assets/scss/variables";
+
+.Projects {
+    background-color: $white;
+    padding: 8em 1.5em 0.1em;
+
+    @include media-breakpoint-up(md) {
+        padding: size(180) size(320);
+    }
+}
+
+.ProjectItem {
+    border-bottom: size(25) solid $primary;
+    margin-bottom: 10px;
+    padding-bottom: 1em;
+    overflow: hidden;
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 25px;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 2;
+        margin-top: 2em;
+    }
+
+    .project-inner {
+        .flex {
+            display: flex;
+        }
+    }
+
+    .project-sidebar {
+        flex: 1;
+        max-width: 450px;
+
+        @include media-breakpoint-up(md) {
+            padding-right: 2em;
+        }
+    }
+
+    .project-body {
+        padding: 0 1em;
+        flex: 2;
+
+        @include media-breakpoint-up(md) {
+            flex: 3;
+        }
+    }
+
+    .title {
+        margin-top: 0;
+        font-size: size(26);
+        // text-transform: uppercase;
+        line-height: 1;
+        user-select: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $primary;
+
+        .title-inner first-child {
+            display: inline-block;
+            padding-right: 1em;
+        }
+
+        .icon {
+            font-size: 2em;
+            font-weight: lighter;
+            margin-left: 0.4em;
+            .minus {
+                display: block;
+            }
+            .plus {
+                display: none;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: size(25);
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: size(30);
+        }
+    }
+
+    p {
+        color: $black;
+        margin-top: 1.5em;
+        font-size: size(18);
+
+        @include media-breakpoint-up(md) {
+            font-size: size(20);
+        }
+    }
+
+    .project-sidebar {
+        img {
+            object-fit: cover;
+            max-height: 700px;
+            width: 100%;
+        }
+    }
+
+    // Animation
+    .project-body,
+    .project-body-inner,
+    .project-sidebar img {
+        transition: all 0.5s;
+    }
+
+    .project-body {
+        // transform: translateY(0px);
+        // margin-top: 0;
+    }
+    .project-body-inner {
+        opacity: 1;
+    }
+
+    &.collapsed {
+        .icon {
+            .minus {
+                display: none;
+            }
+            .plus {
+                display: block;
+            }
+        }
+        // .project-body {
+        //     transform: translateY(0);
+        //     @include media-breakpoint-up(md) {
+        //         transform: translateY(20px);
+        //     }
+        //     @include media-breakpoint-up(xl) {
+        //         transform: translateY(65px);
+        //     }
+        // }
+
+        .project-body-inner {
+            opacity: 0;
+        }
+        .project-sidebar {
+            img {
+                // max-height: 50px;
+                // max-height: 6em;
+
+                // @include media-breakpoint-up(sm) {
+                //     max-height: 10em;
+                // }
+
+                // @include media-breakpoint-up(md) {
+                //     max-height: none;
+                // }
+
+                max-height: none;
+                transition: all 0.5s;
+            }
+        }
+    }
+}
+
+// Image mask position
+.project-image__id-0 {
+    object-position: center 0%;
+}
+.project-image__id-1 {
+    object-position: center 18%;
+}

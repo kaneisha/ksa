@@ -1,0 +1,28 @@
+// Columns
+$layout-columns: 12;
+$layout-columns-md: 21;
+
+$col-width: 100vw / $layout-columns;
+$col-width-md: 100vw / $layout-columns-md;
+
+@function col-md($multiplier) {
+  @return $multiplier * $col-width-md;
+}
+
+@function col($multiplier) {
+  @return $multiplier * $col-width;
+}
+
+@mixin column-layout {
+  display: grid;
+  grid-template-columns: repeat($layout-columns, 1fr);
+  grid-template-rows: auto;
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat($layout-columns-md, 1fr);
+  }
+}
+
+// Vars
+$info-left: col(0.5);
+$info-left-md: col-md(2);

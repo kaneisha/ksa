@@ -1,0 +1,136 @@
+@import "../../assets/scss/variables";
+
+body,
+html,
+#root {
+    height: 100%;
+}
+
+body {
+    // background-color: #f6f6f6;
+    background-color: #000;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+.Layout {
+    font-family: $font-family-sans-serif;
+    position: relative;
+
+    > .noise {
+        position: fixed;
+    }
+}
+
+.text-white {
+    a {
+        color: $white;
+    }
+    a:hover {
+        color: #fff;
+    }
+}
+
+a {
+    color: $primary;
+    transition: 0.2s color;
+
+    &:hover {
+        color: darken($primary, 20);
+        text-decoration: none;
+    }
+
+    &.active {
+        border-bottom: 2px solid $primary;
+    }
+}
+
+// General Styles
+.colored-strong {
+    strong {
+        color: $primary;
+    }
+}
+.border-box {
+    padding: 2.8em 1.8em 1.2em 2.8em;
+    border: 1em solid $primary;
+
+    @include media-breakpoint-up(md) {
+        border: 25px solid $primary;
+    }
+}
+.body-text {
+    // color: $primary;
+    background-color: #f6f6f6;
+    line-height: 1.4;
+
+    @include media-breakpoint-up(md) {
+        line-height: 1.2;
+    }
+
+    p {
+        margin-bottom: 1em;
+        font-size: 16px;
+
+        @include media-breakpoint-up(md) {
+            font-size: size(40);
+        }
+    }
+
+    .title {
+        font-size: size(60);
+        font-weight: bold;
+        margin: 0.6em 0;
+    }
+}
+
+.fluid-images {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.photo-box {
+    display: flex;
+    margin: 2em -0.4em;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(md) {
+        flex-wrap: nowrap;
+    }
+
+    .grow-1 {
+        order: 2;
+        flex: 0 1 50%;
+
+        @include media-breakpoint-up(md) {
+            order: inherit;
+            flex: auto;
+        }
+    }
+
+    div {
+        padding: 0.4em;
+    }
+}
+
+.columns-block {
+    padding: 1em;
+
+    @include media-breakpoint-up(md) {
+        display: flex;
+        padding: 2em;
+    }
+
+    > div {
+        flex: 1;
+        padding: 2.5em;
+    }
+}
+
+.interactive {
+    cursor: pointer;
+}

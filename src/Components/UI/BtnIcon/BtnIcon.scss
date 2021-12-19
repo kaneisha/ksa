@@ -1,0 +1,15 @@
+@import "../../../assets/scss/variables";
+.BtnIcon {
+    border: none;
+    background-color: transparent;
+    font-size: 1.2em;
+    padding: 0.6em;
+    border-radius: 100%;
+    transition: all 0.4s;
+
+    &:active, &:focus {
+        outline: none;
+        background-color: $ui-active--light;
+        color: $ui-active--dark !important;
+    }
+}

@@ -1,0 +1,81 @@
+@import "../../../assets/scss/variables";
+
+.HomeIcons {
+    position: relative;
+    text-align: center;
+    padding: 0.5em;
+    // background-color: #f6f6f6;
+
+    @include media-breakpoint-up(md) {
+        padding: 2em;
+    }
+
+    div {
+        margin: 1.2em;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1500px;
+        flex-wrap: wrap;
+
+        @include media-breakpoint-up(md) {
+            flex-wrap: nowrap;
+        }
+
+        div {
+            flex: 0 0 65px;
+            margin: 0.5em;
+
+            @include media-breakpoint-up(md) {
+                flex: auto;
+                margin: 1em 2em;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            margin: 1em auto;
+            justify-content: space-between;
+        }
+
+        // img {
+        //     // mix-blend-mode: multiply;
+        //     // background-color: $white;
+        // }
+    }
+
+    h1 {
+        font-size: size(42);
+        color: $primary;
+        font-weight: bold;
+        margin: 0.4em 0 0;
+        // margin: 0.5em 0 0;
+
+        @include media-breakpoint-up(md) {
+            font-size: size(70);
+        }
+    }
+
+    h3 {
+        font-size: size(28);
+        color: $primary;
+        font-weight: 600;
+        margin: 0.4em 0.4em 0;
+        display: inline-block;
+        // margin: 1em 0 0;
+
+        @include media-breakpoint-up(md) {
+            font-size: size(54);
+        }
+    }
+
+    .secondary-title {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        // margin-bottom: 0.4em;
+        margin: 2em 0 0.2em;
+    }
+}

@@ -1,0 +1,83 @@
+@import "../../../assets/scss/variables";
+
+.ParalaxContainer {
+    position: relative;
+    z-index: 1;
+
+    .inner {
+        // transition: transform 0.05s linear;
+        position: relative;
+    }
+
+    .paralax-mask {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        clip: rect(0, auto, auto, 0);
+        top: 0;
+        left: 0;
+    }
+
+    .pc__size-block {
+        .size-inner {
+            opacity: 1;
+            padding: 0.5em 0;
+
+            @include media-breakpoint-up(lg) {
+                opacity: 0;
+            }
+        }
+        // pointer-events: none;
+        // z-index: 1;
+    }
+
+    .pc__visible-block {
+        position: fixed;
+        // clip: rect(0, auto, auto, 0);
+        width: 100%;
+        left: 0;
+        top: 50%;
+        height: 100%;
+        // transform: translateY(-50%);
+
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            display: block;
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+        border: 1em solid $primary;
+        // background-color: $white;
+
+        @include media-breakpoint-up(lg) {
+            border: 1.5em solid $primary;
+        }
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+        background-color: $white;
+        // border: 1.5em solid $primary;
+    }
+}
+
+.ParalaxContainer.hidden {
+    opacity: 0;
+}

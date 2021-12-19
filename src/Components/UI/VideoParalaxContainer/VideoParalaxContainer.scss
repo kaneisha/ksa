@@ -1,0 +1,47 @@
+@import "../../../assets/scss/variables";
+
+.VideoParalaxContainer {
+    position: relative;
+    z-index: 0;
+    height: 100vh;
+    width: 100%;
+    // clip: rect(0, auto, auto, 0);
+
+    .paralax-mask {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        clip: rect(0, auto, auto, 0);
+    }
+
+    .inner {
+        // transition: transform 0.05s linear;
+        // position: relative;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        // width: 100%;
+        left: 0;
+        top: 0;
+
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        @include media-breakpoint-up(lg) {
+            position: fixed;
+        }
+    }
+
+    // .fixed-block {
+    //     position: fixed;
+    //     width: 100%;
+    //     left: 0;
+    //     top: 0;
+    //     transform: translateY(-50%);
+    // }
+}
+
+.ParalaxContainer.hidden {
+    opacity: 0;
+}

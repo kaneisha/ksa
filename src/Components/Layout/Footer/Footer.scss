@@ -1,0 +1,46 @@
+@import "../../../assets/scss/variables";
+
+.Footer {
+    font-family: $font-family-sans-serif;
+    margin: 0 auto;
+    color: $primary;
+    // max-width: $maxWidth;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &.useBackground {
+        background-color: #f6f6f6;
+    }
+
+    &.noBg {
+        opacity: 0;
+        animation: fadeIn forwards 0.8s;
+        animation-delay: 1s;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 100%;
+        }
+    }
+
+    .copyright {
+        padding: 2em 0;
+        height: 6em;
+        // text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 500;
+        margin: 0;
+
+        @include media-breakpoint-up(md) {
+            padding: 3em 0;
+            height: 7.5em;
+            font-size: 1.4em;
+        }
+    }
+}

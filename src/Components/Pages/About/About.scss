@@ -1,0 +1,194 @@
+@import "../../../assets/scss/variables";
+
+.About {
+    // $sliderHeight: 38em;
+    $sliderHeight: 26em;
+    // $sliderHeight: auto;
+    background-color: #f6f6f6;
+
+    .about-button-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 0;
+        margin-top: -2em;
+        margin-bottom: 1em;
+        min-height: 1em;
+
+        @include media-breakpoint-up(md) {
+            margin-top: -5em;
+            padding-top: 0.4em;
+            // margin-top: 0;
+        }
+
+        button {
+            background: none;
+            color: $primary !important;
+            opacity: 0.5;
+            animation: opacityAnimation 2s infinite;
+            transition: all 0.2s;
+            font-size: 2.5em;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.8em;
+            }
+
+            &:hover {
+                opacity: 1 !important;
+            }
+        }
+
+        @keyframes opacityAnimation {
+            0% {
+                opacity: 0.4;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 0.4;
+            }
+        }
+    }
+
+    .text-white {
+        a {
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        a:hover {
+            opacity: 0.75;
+        }
+    }
+
+    .FeaturedSlider {
+        position: relative;
+        height: $sliderHeight;
+        overflow: hidden;
+
+        * {
+            white-space: nowrap;
+        }
+
+        img {
+            object-fit: cover;
+            object-position: center;
+
+            max-width: 100vw;
+            @include media-breakpoint-up(sm) {
+                max-width: 700px;
+            }
+
+            width: auto;
+            height: $sliderHeight;
+            // max-height: 100%;
+            // height: 100%;
+            // max-height: $sliderHeight;
+            // width: auto;
+            // max-width: 100vw;
+            // height: $sliderHeight;
+            // width: auto;
+            // height: 100%;
+            // width: auto;
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        bottom: 2em;
+
+        button {
+            &:before {
+                font-size: 18px;
+                color: $primary !important;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .over-navbar {
+        position: absolute;
+        z-index: 100;
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+    }
+
+    // Text Content
+    %desktopDualCol {
+        @include media-breakpoint-up(lg) {
+            display: grid;
+            grid-template-columns: 2fr 8fr 2fr !important;
+            padding-top: 4em;
+
+            .dual-col-row {
+                grid-column: 2 / 3;
+                display: flex;
+                padding-bottom: 4em;
+
+                div:first-child {
+                    padding-right: 2em !important;
+                    flex: 1 2 25% !important;
+                }
+                div:last-child {
+                    flex: 2 1 75% !important;
+                }
+            }
+        }
+    }
+
+    .dual-col-wrapper {
+        padding: 4em 3em 0;
+
+        .dual-col-row {
+            grid-column: 2 / 3;
+            display: flex;
+            padding-bottom: 4em;
+
+            div:first-child {
+                padding-right: 1em;
+                flex: 1 1 30%;
+            }
+            div:last-child {
+                flex: 1 1 70%;
+                h3 {
+                    margin-bottom: 0.5em;
+                }
+            }
+        }
+
+        @extend %desktopDualCol;
+    }
+
+    .dual-col-wrapper-desktop {
+        //padding: 3em;
+        h2 {
+            margin-bottom: 0.5em;
+        }
+
+        @extend %desktopDualCol;
+    }
+
+    h2 {
+        color: $primary;
+        font-size: size(40);
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: size(30);
+        font-weight: bold;
+    }
+
+    p {
+        font-size: size(20);
+    }
+
+    .dual-col-row {
+                @include media-breakpoint-up(sm) {
+                padding-bottom: 0.3em;
+            }
+@include media-breakpoint-up(md) {
+                padding-bottom: 3em;
+            }
+
+    }
+}

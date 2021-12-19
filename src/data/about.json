@@ -1,0 +1,14 @@
+{
+  "about-main": {
+    "title": "about us",
+    "body": "<p><strong>KSA Productions</strong> is a full-service documentary film production company founded by <strong>Rémi Kessler</strong> and <strong>Caroline Schweich</strong>. Launched in 1988 as an international production services company with offices in Paris and New York, <strong>KSA</strong> evolved into producing primarily documentaries for the last ten years.</p><p><strong>KSA documentaries</strong> tell authentic, educational, and gripping stories whether it be the intimate view of the work of advocates who strive to create better lives for those living on the streets of Los Angeles, or the history and unknown stories behind some of Hollywood’s best-known studios. Ongoing projects include a series of videos dedicated to training front-line social workers for institutions such as UCLA and the Los Angeles Department of Mental Health.</p>"
+  },
+  "about-remi": {
+    "title": "rémi kessler",
+    "body": "<p>Most recently, Rémi Kessler directed and produced the feature documentary “The Advocates” which premiered at the 2018 Los Angeles Film Festival before being released theatrically.</p><p>Prior to this, Rémi produced “Shadows and Lights,” which opened the classic documentary section of the 2015 Cannes Film Festival.  Over the years, he has produced many television series, independent features, documentaries, and music videos, working with a range of artists including iconic fashion designer Ozwald Boateng and megastar David Guetta.</p>"
+  },
+  "about-caroline": {
+    "title": "caroline schweich",
+    "body": "<p>Caroline Schweich’s background is in television production, specifically international casting and co-production, and Public Relations. Most recently, she executive produced Rémi Kessler’s documentary “The Advocates”.</p><p>Caroline is also the principal owner of <a href='https://www.fizzcommunications.com/' target='_blank'>Fizz Communications</a> a marketing and events production company where she is a producer of events, festivals, conferences and trade shows in a wide range of industries.</p>"
+  }
+}

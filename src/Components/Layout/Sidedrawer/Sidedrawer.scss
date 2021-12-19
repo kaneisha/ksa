@@ -1,0 +1,43 @@
+@import "../../../assets/scss/variables";
+
+.SideDrawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  z-index: 100;
+  background-color: $primary;
+  width: 100%;
+
+  clip: rect(0, auto, auto, 0);
+
+  .Header {
+    position: fixed;
+    left: 0;
+  }
+
+  *,
+  .Header .BtnIcon {
+    color: $white;
+  }
+
+  .drawer-nav {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 12em;
+    padding: 0 2em;
+
+    li {
+      border-bottom: 1em solid $white;
+    }
+
+    a {
+      font-weight: bold;
+      text-transform: uppercase;
+      display: block;
+      padding: 0.6em;
+      font-size: 2em;
+    }
+  }
+}

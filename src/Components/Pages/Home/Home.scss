@@ -1,0 +1,174 @@
+@import "../../../assets/scss/variables";
+
+.Home {
+    position: relative;
+    padding-top: 1px;
+    background-color: #f6f6f6;
+
+    .video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .home-text-container {
+        font-size: 0.6em;
+        position: fixed;
+        margin: 0 3em;
+
+        @include media-breakpoint-up(md) {
+            font-size: 1em;
+            margin: 0 3em;
+        }
+
+        .home-text {
+            z-index: 10;
+            transition: margin-top 0.8s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.8s linear 0.8s;
+        }
+
+        // initial
+        .home-text-01 {
+            margin-top: calc(100vh - 15em);
+        }
+
+        .home-text-02 {
+            margin-top: calc(100vh - 31em);
+            opacity: 0;
+
+            @include media-breakpoint-up(md) {
+                margin-top: calc(100vh - 25em);
+            }
+
+            p {
+                color: $primary;
+            }
+        }
+
+        .home-text-03 {
+            margin-top: calc(100vh - 35em);
+            opacity: 0;
+
+            @include media-breakpoint-up(md) {
+                margin-top: calc(100vh - 30em);
+            }
+
+            p {
+                color: $secondary;
+            }
+        }
+
+        p {
+            font-size: size(55);
+            font-weight: bold;
+            line-height: 1.2;
+            color: $light;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+    }
+
+    // Stages
+    .stage-01 {
+        .home-text-01 {
+            margin-top: $topnav-height * 2;
+
+            @include media-breakpoint-up(md) {
+                margin-top: $topnav-height;
+            }
+        }
+        .home-text-02 {
+            opacity: 1;
+        }
+    }
+
+    .stage-02 {
+        @extend .stage-01;
+        .home-text-02 {
+            margin-top: 0;
+        }
+        .home-text-03 {
+            opacity: 1;
+        }
+    }
+
+    .stage-03 {
+        @extend .stage-02;
+        .home-text-03 {
+            margin-top: 0;
+        }
+    }
+
+    // Sidebar
+    .home-sidebar {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 2em;
+        pointer-events: none;
+
+        button {
+            background-color: transparent;
+            border: none;
+            color: $primary;
+            padding: 0.2em;
+            font-size: 1.5em;
+            transition: all 0.2s;
+            pointer-events: all;
+
+            &:active,
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                color: darken($primary, 20);
+            }
+        }
+    }
+}
+
+/*
+.home-text-container {
+        position: absolute;
+        top: 0;
+        height: 300vh;
+        padding-top: 1px;
+        margin: 0 3em;
+        text-transform: uppercase;
+        font-size: 1em;
+
+        p {
+            font-size: size(55);
+            font-weight: bold;
+            line-height: 1.2;
+            color: $light;
+        }
+    }
+
+    .home-text {
+        position: sticky;
+        top: $topnav-height;
+        margin-top: 30vh;
+        z-index: 10;
+    }
+
+    .home-text-01 {
+        margin-top: calc(100vh - 14em);
+        top: $topnav-height;
+    }
+    .home-text-02 {
+        margin-top: calc(100vh - 2em);
+        top: 9.2em;
+    }
+    .home-text-03 {
+        margin-top: calc(100vh - 2em);
+        top: 9.2em;
+    }
+*/

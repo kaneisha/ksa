@@ -1,0 +1,30 @@
+$base-size: 16;
+
+html {
+  font-size: $base-size - 6px;
+
+  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+    font-size: $base-size - 4px;
+  }
+
+  @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+    font-size: $base-size - 2px;
+  }
+
+  @media screen and (min-width: map-get($grid-breakpoints, xl)) {
+    font-size: $base-size * 1px;
+  }
+}
+
+$font-family-sans-serif: "Montserrat", sans-serif;
+$font-family-cursive: "Montserrat", sans-serif;
+$headings-font-family: "Montserrat", sans-serif;
+$btn-font-family: $headings-font-family;
+
+@function size($target, $context: $base-size) {
+  @return ($target / $context) * 1em;
+}
+
+//.font-cursive {
+//  font-family: $font-family-cursive;
+//}
